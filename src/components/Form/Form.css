@@ -1,0 +1,15 @@
+.form {
+    @apply flex items-center
+}
+
+.form input {
+    @apply text-lg rounded-bl-lg rounded-tl-lg h-12 lg:min-w-[500px]
+    placeholder-gray-500 px-6
+    focus:outline-0
+}
+
+.form button {
+    @apply text-lg rounded-br-lg rounded-tr-lg h-12 bg-black text-white w-12
+    flex items-center justify-center
+    hover:opacity-80
+}

@@ -1,0 +1,23 @@
+.info {
+    @apply flex flex-col lg:flex-row rounded-lg bg-white absolute min-h-[12vh] bottom-[-50%] lg:bottom-[-6vh] z-20 shadow-2xl py-6
+}
+
+.infoItem {
+    @apply flex flex-col px-8 uppercase w-[80vw] lg:w-[15vw]
+}
+
+.infoItem > .title {
+    @apply text-center lg:text-left text-xs text-gray-400 font-semibold mb-1
+}
+
+.infoItem > .value {
+    @apply text-center lg:text-left text-black font-semibold
+}
+
+.info-item-initial,.info-item-middle {
+    @apply lg:border-r lg:border-gray-400
+}
+
+.info-item-final{
+    @apply bg-white
+}

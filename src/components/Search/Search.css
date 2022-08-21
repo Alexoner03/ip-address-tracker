@@ -1,0 +1,7 @@
+.search {
+    @apply min-h-[270px] lg:min-h-[30vh] bg-center bg-cover flex flex-col items-center py-8 relative z-10;
+}
+
+.search__name {
+    @apply text-center text-2xl text-white mb-8
+}

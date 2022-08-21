@@ -42,14 +42,22 @@ function Info(props: { GeoIPResponse: GeoIPResponse }) {
 
     const {GeoIPResponse} = props
     const infoDetails: infoDetails[] = [
-        {title: "ip address", value: GeoIPResponse.ip, position: infoPosition.initial},
+        {
+            title: "ip address",
+            value: GeoIPResponse.ip === "" ? "PENDING" : GeoIPResponse.ip,
+            position: infoPosition.initial
+        },
         {
             title: "location",
-            value: `${GeoIPResponse.location.country}, ${GeoIPResponse.location.region}, ${GeoIPResponse.location.city}`,
+            value: GeoIPResponse.location.country === "" ? "PENDING" : `${GeoIPResponse.location.country}, ${GeoIPResponse.location.region}, ${GeoIPResponse.location.city}`,
             position: infoPosition.middle
         },
-        {title: "timezone", value: `UTC ${GeoIPResponse.location.timezone}`, position: infoPosition.middle},
-        {title: "isp", value: GeoIPResponse.isp, position: infoPosition.final},
+        {
+            title: "timezone",
+            value: GeoIPResponse.location.timezone === "" ? "PENDING" : `UTC ${GeoIPResponse.location.timezone}`,
+            position: infoPosition.middle
+        },
+        {title: "isp", value: GeoIPResponse.isp === "" ? "PENDING" : GeoIPResponse.isp, position: infoPosition.final},
     ]
 
     return (

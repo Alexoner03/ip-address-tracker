@@ -10,6 +10,7 @@ function App() {
             <Search/>
             <Map/>
         </div>
+        <p className={"copy"}>Created by Alexander Ortiz <a href="https://aortiz.netlify.app">visit me here</a></p>
     </ContextProvider>
   )
 }
